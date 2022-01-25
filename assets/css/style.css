@@ -118,7 +118,7 @@ header[class="menu"]
 }
 .banner-content > div[class="container"]
 {
-    height: inherit;
+    height: 100%;
 }
 
 .banner-content .inf_banner
@@ -156,6 +156,7 @@ header[class="menu"]
 }
 .inf_banner > .inf_content > .description_banner
 {
+    margin-top: 20px;
     font-size: .9em;
     color: rgb(var(--color-black), .9);
 }
@@ -179,9 +180,9 @@ header[class="menu"]
 .backg_svg
 {
     position: absolute;
-    width: 110%;
+    width: 100%;
     top: 0;
-    left: -18%;
+    left: 0;
     z-index: -1;
 }
 .img_banner .img_content img
@@ -194,7 +195,9 @@ header[class="menu"]
 {
     position: absolute;
     top: 50%;
-    transform: translateY(50%);
+    
+    transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
     -webkit-transform: translateY( -50%);
 }
 .banner-content .inf_banner,
@@ -254,7 +257,7 @@ header[class="menu"]
 .widget_item > .description_item
 {
     -webkit-line-clamp: 3;
-
+    margin: 10px 0;
     font-size: .8em;
     color: rgb(var(--color-black), .9);
 }
@@ -325,7 +328,6 @@ header[class="menu"]
 .rating_body .col-img .img
 {
     height: 65%;
-    border: 1px solid rgb(var(--color-black), .2);
 }
 .rating_body .col-img .img img
 {
@@ -392,12 +394,12 @@ header[class="menu"]
 
 .col-inf > .title_rating
 {
-    margin-bottom: 10px;
     font-size: 1.4em;
     font-weight: 600;
 }
 .col-inf > .description_rating
 {
+    margin-top: 20px;
     font-size: .9em;
     color:rgb(var(--color-black), .9);
 }
@@ -406,6 +408,10 @@ header[class="menu"]
 
 /* ------------------------[ CREATOR ]------------------------ */
 /* ---------------------------------------------------------- */
+.line-creator
+{
+    display: none;
+}
 
 .creator-content
 {
@@ -451,7 +457,7 @@ header[class="menu"]
     font-size: 2em;
     font-weight: 900;
     text-align: right;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     color: rgb(var(--color-light-pink));
 }
 .inf_creator > .text
@@ -484,13 +490,7 @@ header[class="menu"]
 }
 .img_creator > .backg_svg
 {
-    top: -17%;
-    left: -9%;
-
-    transform: scale(1.1);
-    -o-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    -webkit-transform: scale(1.1);
+    top: -6%;
 }
 .img_creator > .img
 {
@@ -657,15 +657,26 @@ header[class="menu"]
 
 #footer .title
 {
+    position: relative;
+
     font-size: 1.5em;
     font-weight: 600;
-    margin-bottom: 10px;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+#footer .title::after
+{
+    content: '';
+    display: block;
+    width: 80px;
+    height: 2px;
+    margin-top: 5px;
+    background: rgb(var(--color-light-blue));
 }
 #footer li
 {
     padding: 5px 0;
     margin: 5px 0;
-    border-bottom: 1px solid rgb(var(--color-purple));
     font-size: .8em;
 }
 #footer li:last-child
@@ -772,14 +783,18 @@ header[class="menu"]
     }
     .inf_banner > .inf_content > .title_banner
     {
-        font-size: 2em;
+        font-size: 10vw;
         text-align: center;
     }
 
     .rating_body .col-img > .widget_item
     {
         width: 260px;
-        height: 370px;
+        height: auto;
+    }
+    .rating_body .col-img .img
+    {
+        height: 240px;
     }
     .rating_body .col-img .stars
     {
@@ -833,7 +848,7 @@ header[class="menu"]
         float: none;
         display: flex;
         width: 400px;
-        margin: 0 auto;
+        margin: 20px auto 0 auto;
         order: 2;
     }
 
@@ -897,14 +912,23 @@ header[class="menu"]
         margin-bottom: 0;
     }
 
+    .line-creator
+    {
+        display: flex;
+        width: 100%; 
+        fill: rgb(var(--color-purple),.1);
+    }
     .creator-content::after
     {
         width: 100%;
-        height: 90%;
+        height: 100%;
         left: 0;
-
         clip-path: none;
         -webkit-clip-path: none;
+    }
+    .creator-content .title_widget
+    {
+        margin: 0 0 50px 0;
     }
     .creator-content .creator_body
     {
@@ -929,11 +953,11 @@ header[class="menu"]
     }
     .img_creator > .backg_svg
     {
-        top: -9%;
-        left: -18%;
+        top: 0;
+        left: -6%;
         transform: scale(1.2);
         -o-transform: scale(1.2);
-        -ms-transform: scale(1.2);
+        -moz-transform: scale(1.2);
         -webkit-transform: scale(1.2);
     }
     .inf_creator > .name
@@ -976,7 +1000,7 @@ header[class="menu"]
 
     .rating_body .col-img .img
     {
-        height: 320px;
+        height: 80vw;
     }
 
     #footer .inf
