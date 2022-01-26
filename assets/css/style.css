@@ -532,18 +532,13 @@ header[class="menu"]
 .body_slide .box_feedback
 {
     float: left;
-    width: 295px;
+    width: 289px;
     height: 100%;
     padding: 10px;
-    margin-right: 10px;
+    margin-right: 30px;
 
     border: 2px solid;
     border-radius: 10px;
-
-    transform: scale(.9);
-    -o-transform: scale(.9);
-    -moz-transform: scale(.9);
-    -webkit-transform: scale(.9);
 }
 .box_feedback:nth-child(1),
 .box_feedback:nth-child(4)
@@ -562,17 +557,6 @@ header[class="menu"]
 .box_feedback:last-child
 {
     margin-right: 0px;
-}
-
-.slide_feedback .constrast
-{
-    margin-left: 10px;
-    margin-right: 20px;
-
-    transform: scale(1.1);
-    -o-transform: scale(1.1);
-    -moz-transform: scale(1.1);
-    -webkit-transform: scale(1.1);
 }
 
 .box_feedback > .user
@@ -728,11 +712,11 @@ header[class="menu"]
     }
     .body_slide .box_feedback
     {
-        width: 253px;
+        width: 246px;
     }
-    .box_feedback > .user .picture
+    .box_feedback > .user .name
     {
-        height: 105px;
+        flex: 1;
     }
     .box_feedback > .text
     {
@@ -787,6 +771,27 @@ header[class="menu"]
         text-align: center;
     }
 
+    .widget_item > .inf_item
+    {
+        flex-direction: column;
+        text-align: center;
+    }
+    .inf_item > .title,
+    .inf_item > .img_item
+    {
+        flex: none;
+    }
+    .inf_item > .title
+    {
+        order: 2;
+    }
+    .inf_item > .img_item
+    {
+        height: 50px;
+        margin-bottom: 10px;
+        order: 1;
+    }
+
     .rating_body .col-img > .widget_item
     {
         width: 260px;
@@ -814,18 +819,12 @@ header[class="menu"]
 
     .slide_feedback
     {
-        height: 320px;
-        transform: scale(.9);
-        -webkit-transform: scale(.9);
-    }
-    .body_slide .box_feedback
-    {
+        margin: auto;
         width: 246px;
     }
-    .box_feedback > .text
+    .slide_feedback > .body_slide
     {
-        line-clamp: 7;
-        -webkit-line-clamp: 7;
+        padding: 0 0;
     }
 }
 
@@ -858,31 +857,9 @@ header[class="menu"]
         height: 170px;
     }
 
-    .slide_feedback
+    #footer .logo
     {
-        margin: auto;
-        width: 246px;
-        transform: none;
-        -webkit-transform: none;
-    }
-    .slide_feedback > .body_slide
-    {
-        padding: 0 0;
-    }
-    .body_slide .box_feedback
-    {
-        transform: none;
-        -o-transform: none;
-        -moz-transform: none;
-        -webkit-transform: none;
-    }
-    .box_feedback > .user .picture
-    {
-        height: 93px;
-    }
-    .box_feedback > .user .picture img
-    {
-        width: 100%;
+        display: none;
     }
 }
 
@@ -910,6 +887,10 @@ header[class="menu"]
     .items-content .widget_item:last-child
     {
         margin-bottom: 0;
+    }
+    .inf_item > .img_item
+    {
+        height: 100px;
     }
 
     .line-creator
@@ -1010,9 +991,5 @@ header[class="menu"]
     #footer .inf > div
     {
         padding: 20px 0;
-    }
-    #footer .logo
-    {
-        display: none;
     }
 }
